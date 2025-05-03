@@ -12,7 +12,10 @@ const SearchBox = () => {
     e.preventDefault();
     if (city.trim()) {
       dispatch(fetchWeather(city.trim()));
+    } else {
+      alert("Please enter a city name.");
     }
+    setCity("");
   };
 
   return (

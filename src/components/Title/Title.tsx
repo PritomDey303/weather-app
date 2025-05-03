@@ -1,10 +1,8 @@
-import React from "react";
-
 const Title = () => {
   return (
     <>
-      <h1 className="animate-pulse bounce text-4xl ml-5 font-bold ">
-        Forcastio
+      <h1 className="animate-pulse bounce text-2xl md:text-3xl  ml-1 md:ml-5 font-bold ">
+        AuraWeather
       </h1>
     </>
   );
