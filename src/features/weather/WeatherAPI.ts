@@ -10,7 +10,7 @@ export const fetchWeatherData = async (city: string) => {
             throw new Error("Failed to fetch weather data");
         }
         const data = await response.json();
-        console.log(data);
+        const now = new Date();
         return {
 
             temperature: Math.round(data.main.temp),
@@ -18,7 +18,9 @@ export const fetchWeatherData = async (city: string) => {
             windSpeedInKmh: data.wind.speed * 3.6,
             city: data.name,
             icon: data.weather[0].icon,
-            description: data.weather[0].description,
+            description: data.weather[0].description.charAt(0).toUpperCase() + data.weather[0].description.slice(1),
+            date: now.toLocaleDateString(),
+            time: now.toLocaleTimeString()
         }
     } catch (error) {
         console.error("Error fetching weather data:", error);

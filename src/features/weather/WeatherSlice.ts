@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { fetchWeatherData } from "./WeatherAPI";
+import { addToHistory } from "../searchHistory/SearchHistorySlice";
 
 interface WeatherData {
     temperature: number;
@@ -8,6 +9,8 @@ interface WeatherData {
     city: string;
     icon: string;
     description: string;
+    date: string;
+    time: string
 }
 interface WeatherState {
     isLoading: boolean;
@@ -22,10 +25,19 @@ const initialState: WeatherState = {
 };
 
 //action to fetch the weather data
-export const fetchWeather = createAsyncThunk("weather/fetchWeather", async (city: string) => {
-    const weatherData = fetchWeatherData(city);
-    return weatherData;
-})
+export const fetchWeather = createAsyncThunk(
+    "weather/fetchWeather",
+    async (city: string, { dispatch }) => {
+        const data = await fetchWeatherData(city);
+
+        if (data) {
+            dispatch(addToHistory(data));
+        }
+
+
+        return data;
+    }
+);
 
 
 //slice to handle the weather data
