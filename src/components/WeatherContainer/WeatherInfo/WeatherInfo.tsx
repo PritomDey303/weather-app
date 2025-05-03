@@ -61,7 +61,7 @@ const WeatherInfo = () => {
       <h1 className="text-5xl font-bold">
         {displayData?.temperature !== undefined
           ? `${displayData.temperature}°C`
-          : "--°C"}
+          : "--"}
       </h1>
       <h2 className="text-2xl font-light mt-2">{displayData?.city || ""}</h2>
       <p className="text-lg opacity-70 mt-1">

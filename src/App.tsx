@@ -7,6 +7,7 @@ import SearchHistory from "./components/SearchHistory/SearchHistory";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  //cheking local storage for mode
   useEffect(() => {
     const mode = localStorage.getItem("mode");
     if (mode === "dark") {
@@ -15,6 +16,7 @@ function App() {
       setIsDarkMode(false);
     }
   }, []);
+  //toggle mode function
   const toggleMode = () => {
     if (isDarkMode) {
       localStorage.setItem("mode", "light");

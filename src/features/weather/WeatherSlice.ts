@@ -18,13 +18,14 @@ interface WeatherState {
     error: string | null;
 }
 
+//initial state of the weather slice
 const initialState: WeatherState = {
     isLoading: false,
     data: null,
     error: null,
 };
 
-//action to fetch the weather data
+//creating fetchWeather thunk to fetch weather data
 export const fetchWeather = createAsyncThunk(
     "weather/fetchWeather",
     async (city: string, { dispatch }) => {
@@ -40,7 +41,7 @@ export const fetchWeather = createAsyncThunk(
 );
 
 
-//slice to handle the weather data
+//weather slice to handle weather data
 const weatherSlice = createSlice({
     name: "weather",
     initialState,

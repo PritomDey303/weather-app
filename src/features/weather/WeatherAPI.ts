@@ -1,5 +1,5 @@
 
-
+//api calling function to fetch weather data from OpenWeatherMap API
 export const fetchWeatherData = async (city: string) => {
     const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;

@@ -9,7 +9,7 @@ const SearchHistory = () => {
 
   return (
     <>
-      {/* Search History Button */}
+      {/* search History button */}
       <div className="fixed bottom-4 right-4 z-50 sm:bottom-6 sm:right-6">
         <button
           onClick={() => setShowModal(true)}

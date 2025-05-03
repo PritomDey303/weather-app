@@ -12,11 +12,12 @@ interface HistoryEntry {
     time: string
 }
 
+//defining initial state type
 interface SearchHistoryState {
     history: HistoryEntry[]
 }
 
-//  load history from localStorage
+//load history function
 const loadHistory = (): HistoryEntry[] => {
     try {
         const stored = localStorage.getItem('searchHistory');
@@ -26,10 +27,12 @@ const loadHistory = (): HistoryEntry[] => {
         return [];
     }
 };
-//inital state
+//defining inital state
 const initialState: SearchHistoryState = {
     history: loadHistory(),
 };
+
+//creating search history slice
 const searchHistorySlice = createSlice({
     name: 'searchHistory',
     initialState,
@@ -39,7 +42,7 @@ const searchHistorySlice = createSlice({
             const updatedHistory = [...state.history, action.payload];
             console.log(updatedHistory)
 
-            // Keep only the last 5 entries
+            //removing oldest entry if history exceeds 5 entries
             if (updatedHistory.length > 5) {
                 updatedHistory.shift();
             }
