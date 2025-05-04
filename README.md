@@ -6,7 +6,6 @@
 
 [Visit AuraWeather Live](https://auraweather303.netlify.app)
 
-> Replace the link above with your actual deployed project URL.
 
 ---
 
