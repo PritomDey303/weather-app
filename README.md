@@ -4,7 +4,7 @@
 
 ## 🌐 Live Link
 
-[👉 Visit AuraWeather Live](https://auraweather303.netlify.app)
+[Visit AuraWeather Live](https://auraweather303.netlify.app)
 
 > Replace the link above with your actual deployed project URL.
 
@@ -12,12 +12,12 @@
 
 ## 🚀 Features
 
-- 🌤️ Real-time weather updates using OpenWeather API
-- 🌗 Light and dark mode toggle
-- 🧠 Search history with quick re-access
-- ⚛️ Built with React + TypeScript
-- 🎯 State handling via Redux Toolkit
-- 💨 Styled with Tailwind CSS (no UI libraries used)
+- Real-time weather updates using OpenWeather API
+- Light and dark mode toggle
+- Search history with quick re-access
+- Built with React + TypeScript
+- State handling via Redux Toolkit
+- Styled with Tailwind CSS (no UI libraries used)
 
 ---
 
