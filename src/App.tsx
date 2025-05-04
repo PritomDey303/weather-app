@@ -28,7 +28,7 @@ function App() {
   };
   return (
     <div className={isDarkMode ? "dark" : "light"}>
-      <div className="w-full min-h-screen px-5 py-7 bg-gray-100 dark:bg-gray-800 text-black dark:text-white">
+      <div className="w-full min-h-screen px-5 py-7 bg-gray-100 dark:bg-gray-800 text-black dark:text-white transition-colors duration-300">
         <Title />
 
         <ModeToggler isDarkMode={isDarkMode} toggleMode={toggleMode} />

@@ -43,7 +43,7 @@ const WeatherInfo = () => {
   if (isLoading) return <WeatherSkeleton />;
 
   return (
-    <div className="w-full max-w-xs mx-auto mt-5 p-5 rounded-3xl text-center">
+    <div className="w-full max-w-xs mx-auto mt-5 p-5 rounded-3xl text-center transition-opacity duration-300 opacity-100">
       {/* Weather Icon */}
       <div className="mb-2">
         {displayData?.icon ? (
